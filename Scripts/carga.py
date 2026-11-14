@@ -30,12 +30,12 @@ from neo4j import GraphDatabase
 URI = "bolt://localhost:7687"
 AUTH = ("", "")
 
-# Localiza cypher/01_seed.cypher independente de carga.py estar na raiz ou em src/
-BASE_DIR = Path(__file__).resolve().parent
+# Localiza cypher/grafo_cobras.cypher independente de carga.py estar na raiz ou em src/
+BASE_DIR = Path(__file__).resolve().parent.parent
 SEED_FILE = (
-    BASE_DIR / "cypher" / "seed.cypher"
-    if (BASE_DIR / "cypher" / "seed.cypher").exists()
-    else BASE_DIR.parent / "cypher" / "seed.cypher"
+    BASE_DIR / "cypher" / "grafo_cobras.cypher"
+    if (BASE_DIR / "cypher" / "grafo_cobras.cypher").exists()
+    else BASE_DIR.parent / "cypher" / "grafo_cobras.cypher"
 )
 
 
