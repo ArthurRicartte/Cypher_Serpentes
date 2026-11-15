@@ -4,7 +4,19 @@
 Base de conhecimento sobre serpentes brasileiras remodelada como um **Grafo de Propriedades (LPG)** no **Memgraph**, utilizando **Cypher** e **Python** para carga, consultas analíticas, operações de escrita e travessias.
 
 ---
+## Estrutura do Projeto
 
+```text
+├── cypher/
+│   └── grafo_cobras.cypher   # Armazena a estrutura do grafo (nós + relacionamentos)
+├── Scripts/
+│   ├── carga.py              # Conecta ao Memgraph e executa o grafo_cobras.cypher
+│   └── consultas.py          # Executa as consultas
+├── docker-compose.yml        # Armazena os containers Memgraph + Memgraph Lab + volume mg_lib
+├── requirements.txt          # Dependências Python (driver neo4j)
+└── README.md                 # Documentação do modelo e guia de execução
+```
+---
 ## 1. Modelo do Grafo de Propriedades
 
 O grafo possui **27 nós** e **62 relacionamentos**:
